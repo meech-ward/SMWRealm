@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2224A1481BCC377900E55B0D /* SMWRealmPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2224A1471BCC377900E55B0D /* SMWRealmPerson.m */; settings = {ASSET_TAGS = (); }; };
 		542910ED716FB5311057AE9B /* Pods_SMWRealm_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1754F4D82CC109714EC2A8 /* Pods_SMWRealm_Example.framework */; };
 		581C53AE0415E6C811637D5B /* Pods_SMWRealm_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4386A9FA8C9B1D8B5759840 /* Pods_SMWRealm_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -37,7 +38,9 @@
 
 /* Begin PBXFileReference section */
 		192C259073975071D5DAEAF4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* SMWRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SMWRealm.app; path = SMWRealm_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2224A1461BCC377900E55B0D /* SMWRealmPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMWRealmPerson.h; sourceTree = "<group>"; };
+		2224A1471BCC377900E55B0D /* SMWRealmPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMWRealmPerson.m; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* SMWRealm_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMWRealm_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -50,7 +53,7 @@
 		6003F5A5195388D20070C39A /* SMWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMWViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* SMWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMWViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = SMWRealm_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* SMWRealm_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMWRealm_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -93,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2224A1451BCC376B00E55B0D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				2224A1461BCC377900E55B0D /* SMWRealmPerson.h */,
+				2224A1471BCC377900E55B0D /* SMWRealmPerson.m */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +120,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* SMWRealm.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* SMWRealm_Example.app */,
+				6003F5AE195388D20070C39A /* SMWRealm_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +147,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* SMWViewController.h */,
 				6003F5A6195388D20070C39A /* SMWViewController.m */,
+				2224A1451BCC376B00E55B0D /* Realm */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -213,7 +226,7 @@
 			);
 			name = SMWRealm_Example;
 			productName = SMWRealm;
-			productReference = 6003F58A195388D20070C39A /* SMWRealm.app */;
+			productReference = 6003F58A195388D20070C39A /* SMWRealm_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* SMWRealm_Tests */ = {
@@ -234,7 +247,7 @@
 			);
 			name = SMWRealm_Tests;
 			productName = SMWRealmTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* SMWRealm_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -392,6 +405,7 @@
 			files = (
 				6003F59E195388D20070C39A /* SMWAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SMWViewController.m in Sources */,
+				2224A1481BCC377900E55B0D /* SMWRealmPerson.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,7 +529,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMWRealm/SMWRealm-Prefix.pch";
 				INFOPLIST_FILE = "SMWRealm/SMWRealm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.meech-ward.SMWRealm-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -530,7 +546,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMWRealm/SMWRealm-Prefix.pch";
 				INFOPLIST_FILE = "SMWRealm/SMWRealm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.meech-ward.SMWRealm-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
