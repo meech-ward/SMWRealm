@@ -11,6 +11,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+SMWRealm requires iOS 7.0 and above or OS X 10.9 and above.
+
+SMWRealm also requires the thirdy-party open source library [Realm](https://realm.io/)
+
 ## Installation
 
 SMWRealm is available through [CocoaPods](http://cocoapods.org). To install

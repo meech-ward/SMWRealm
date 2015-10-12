@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (1.0.3)
+  - SMWRealm (0.1.0)
+  - Specta (1.0.4)
+
+DEPENDENCIES:
+  - Expecta
+  - SMWRealm (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  SMWRealm:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
+  SMWRealm: daf7a228ef669e330f1c10f4cf4f042b169c0767
+  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
+
+COCOAPODS: 0.39.0
