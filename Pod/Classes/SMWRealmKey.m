@@ -7,7 +7,76 @@
 //
 
 #import "SMWRealmKey.h"
+#import <Realm/Realm.h>
+
+@interface SMWRealmKey ()
+
+// The value of the primary key of the realm object that this represents.
+@property (strong, nonatomic) id primaryKey;
+
+// The class of the realm object this object represents.
+@property (strong, nonatomic) Class realmClass;
+
+@end
 
 @implementation SMWRealmKey
+
+#pragma mark - SetUp
+
+- (instancetype)initWithRealmObject:(RLMObject *)realmObject {
+    self = [super init];
+    if (self) {
+        self.primaryKey = [self primaryKeyForRealmObject:realmObject];
+        self.realmClass = realmObject.class;
+    }
+    return self;
+    
+}
+
+#pragma mark -
+#pragma mark - Read
+
+- (void)readRealmObject:(void(^)(id object))block {
+    
+    // Get the current object
+    id obj = [_realmClass objectForPrimaryKey:_primaryKey];
+    
+    // Perform the block
+    block(obj);
+}
+
+#pragma mark -
+#pragma mark - Update
+
+- (void)updateRealmObject:(void(^)(id object, RLMRealm *realm))block {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    
+    // Get the current object
+    id obj = [_realmClass objectForPrimaryKey:_primaryKey];
+    
+    // Perform the block
+    [realm beginWriteTransaction];
+    block(obj, realm);
+    [realm commitWriteTransaction];
+}
+
+#pragma mark -
+#pragma mark - Delete
+
+- (void)deleteRealmObject {
+    [self updateRealmObject:^(id object, RLMRealm *realm) {
+        [realm deleteObject:object];
+    }];
+}
+
+#pragma mark -
+#pragma mark - Utility
+
+/// Get the current realm object's primary key
+- (id)primaryKeyForRealmObject:(RLMObject *)realmObject {
+    NSString *primaryKeyProperty = [realmObject.class primaryKey];
+    id key = [realmObject valueForKey:primaryKeyProperty];
+    return key;
+}
 
 @end
