@@ -23,6 +23,10 @@
 
 #pragma mark - SetUp
 
++ (instancetype)keyWithRealmObject:(RLMObject *)realmObject {
+    return [[SMWRealmKey alloc] initWithRealmObject:realmObject];
+}
+
 - (instancetype)initWithRealmObject:(RLMObject *)realmObject {
     self = [super init];
     if (self) {

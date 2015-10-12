@@ -12,6 +12,9 @@
 
 @interface SMWRealmKey<RLMObjectType> : NSObject
 
+/// A class method that does the same thing as the initWithRealmObject object method.
++ (instancetype)keyWithRealmObject:(RLMObject *)realmObject;
+
 /**
  Create a new `SMWRealmKey` object using the data from a realm object.
  @param realmObject The realm object that this object will represent.
@@ -56,6 +59,6 @@
  @param object A realm key object to be compared to this object.
  @return YES when the two objects represent the same RLMObject, NO otherwise.
  */
- - (BOOL)isEqualToKey:(id)object;
+- (BOOL)isEqualToKey:(id)object;
 
 @end
