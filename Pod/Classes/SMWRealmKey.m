@@ -79,4 +79,27 @@
     return key;
 }
 
+- (BOOL)isEqualToKey:(id)object {
+    SMWRealmKey *otherKey = (SMWRealmKey *)object;
+    
+    // Make sure both objects have primary keys
+    if (!_primaryKey || !otherKey.primaryKey) {
+        return NO;
+    }
+    
+    // Make sure the primary keys are the same class
+    if ([_primaryKey class] != [otherKey.primaryKey class]) {
+        return NO;
+    }
+    
+    // Check for any special isequal methods
+    if ([_primaryKey class] == [NSString class]) {
+        if (![_primaryKey isEqualToString:otherKey.primaryKey]) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
 @end

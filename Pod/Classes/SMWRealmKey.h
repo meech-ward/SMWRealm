@@ -48,4 +48,14 @@
  */
 - (void)deleteRealmObject;
 
+
+/// @name Equality
+
+/**
+ Compare two realm key objects to determine if they represent the same RLMObject.
+ @param object A realm key object to be compared to this object.
+ @return YES when the two objects represent the same RLMObject, NO otherwise.
+ */
+ - (BOOL)isEqualToKey:(id)object;
+
 @end

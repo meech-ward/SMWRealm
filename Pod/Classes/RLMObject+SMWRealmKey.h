@@ -10,6 +10,8 @@
 
 @class SMWRealmKey;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface RLMObject (SMWRealmKey)
 
 /**
@@ -25,3 +27,5 @@
 - (SMWRealmKey *)smw_createOrUpdateInRealm:(RLMRealm *)realm;
 
 @end
+
+NS_ASSUME_NONNULL_END
