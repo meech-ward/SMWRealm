@@ -1,15 +1,15 @@
 {
   "name": "SMWRealm",
   "version": "0.1.0",
-  "summary": "A short description of SMWRealm.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SMWRealm",
+  "summary": "Make it easier to pass around, read, and modify realm objects accross multiple threads.",
+  "description": "SMWRealm uses the primary keys of RMLObjects and thread safe SMWRealmKey objects to easily use RLMObjects accorss multiple threads.",
+  "homepage": "https://github.com/meech-ward/SMWRealm",
   "license": "MIT",
   "authors": {
     "Sam Meech-Ward": "sam@meech-ward.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SMWRealm.git",
+    "git": "https://github.com/meech-ward/SMWRealm.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -20,6 +20,11 @@
   "resource_bundles": {
     "SMWRealm": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "Realm": [
+
     ]
   }
 }
