@@ -46,10 +46,10 @@ Setup your RLMObject as normal.
     Person *person = [[Person alloc] init];
     person.firstName = @"Sam";
     person.lastName = @"Meech-Ward";
-Then save to a realm using the smw save method which returns a realm key object
+Then save to a realm using the SMWRealmKey object
 
     RLMRealm *realm = [RLMRealm defaultRealm];
-    SMWRealmKey<Person *> *personKey = [person smw_createOrUpdateInRealm:realm];
+    SMWRealmKey<Person *> *personKey = [SMWRealmKey createOrUpdateObject:person inRealm:realm];
 Now you can pass this SMWRealmKey object around different threads and use its methods to read and update the RLMObject.
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
