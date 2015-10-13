@@ -30,7 +30,7 @@ describe(@"Realm key", ^{
         person.key = primaryKey;
         person.firstName = defaultFirstName;
         person.lastName = defaultLastName;
-        personKey = [person smw_createOrUpdate];
+        personKey = [SMWRealmKey createOrUpdateObject:person];
     });
     
     afterEach(^{

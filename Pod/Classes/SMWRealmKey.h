@@ -14,6 +14,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SMWRealmKey<RLMObjectType> : NSObject
 
+/**
+ Create or update a realm object to the default realm.
+ @param object The RLMObject to save.
+ @return A new `SMWRealmKey` object. representing the passed in RLMObject.
+ */
++ (instancetype)createOrUpdateObject:(RLMObject *)object;
+
+/**
+ Create or update a realm object to the default realm.
+ @param object The RLMObject to save.
+ @param realm The Realm to save to.
+ @return A new `SMWRealmKey` object. representing the passed in RLMObject.
+ */
++ (instancetype)createOrUpdateObject:(RLMObject *)object inRealm:(RLMRealm *)realm;
+
 /// A class method that does the same thing as the initWithRealmObject object method.
 + (instancetype)keyWithRealmObject:(RLMObject *)realmObject;
 

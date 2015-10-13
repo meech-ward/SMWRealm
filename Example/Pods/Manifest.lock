@@ -3,7 +3,7 @@ PODS:
   - Realm (0.95.3):
     - Realm/Headers (= 0.95.3)
   - Realm/Headers (0.95.3)
-  - SMWRealm (0.1.0):
+  - SMWRealm (0.1.1):
     - Realm
   - Specta (1.0.4)
 
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
   Realm: 55885fa05865344994ad8b56da96669ffa39fbf1
-  SMWRealm: 787d8090a229534a21ac68117f984d8317bf48b1
+  SMWRealm: 3b580e590df1d7da84e3d7726fa70d433e59a40c
   Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
 
 COCOAPODS: 0.39.0

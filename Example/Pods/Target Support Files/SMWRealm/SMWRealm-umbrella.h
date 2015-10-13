@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 
-#import "RLMObject+SMWRealmKey.h"
 #import "SMWRealm.h"
 #import "SMWRealmKey.h"
 

@@ -23,6 +23,20 @@
 
 #pragma mark - SetUp
 
++ (instancetype)createOrUpdateObject:(RLMObject *)object {
+    return [self createOrUpdateObject:object inRealm:[RLMRealm defaultRealm]];
+}
+
++ (instancetype)createOrUpdateObject:(RLMObject *)object inRealm:(RLMRealm *)realm {
+    // Create or update this object
+    [realm beginWriteTransaction];
+    [object.class createOrUpdateInRealm:realm withValue:object];
+    [realm commitWriteTransaction];
+    
+    // Create a new realm key object for this object
+    return [self keyWithRealmObject:object];
+}
+
 + (instancetype)keyWithRealmObject:(RLMObject *)realmObject {
     return [[SMWRealmKey alloc] initWithRealmObject:realmObject];
 }

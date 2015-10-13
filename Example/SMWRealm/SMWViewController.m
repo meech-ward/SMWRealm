@@ -23,7 +23,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    return;
     
     [self realm];
     
@@ -41,7 +40,7 @@
     person.key = [[NSUUID UUID] UUIDString];
     
     // Save it to the default realm
-    SMWRealmKey<SMWRealmPerson *> *personKey = [person smw_createOrUpdateInRealm:[RLMRealm defaultRealm]];
+    SMWRealmKey<SMWRealmPerson *> *personKey = [SMWRealmKey createOrUpdateObject:person inRealm:[RLMRealm defaultRealm]];
     // Use this personKey object to represent the person accross different threads
     
     NSLog(@"Current Thread: %@", [NSThread currentThread]);

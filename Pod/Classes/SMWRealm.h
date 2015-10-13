@@ -10,6 +10,5 @@
 #define SMWRealm_h
 
 #import "SMWRealmKey.h"
-#import "RLMObject+SMWRealmKey.h"
 
 #endif /* SMWRealm_h */
