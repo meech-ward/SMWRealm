@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2224A1481BCC377900E55B0D /* SMWRealmPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2224A1471BCC377900E55B0D /* SMWRealmPerson.m */; settings = {ASSET_TAGS = (); }; };
+		2224A14A1BCC434900E55B0D /* SMWRealmKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2224A1491BCC434900E55B0D /* SMWRealmKeyTests.m */; settings = {ASSET_TAGS = (); }; };
 		542910ED716FB5311057AE9B /* Pods_SMWRealm_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1754F4D82CC109714EC2A8 /* Pods_SMWRealm_Example.framework */; };
 		581C53AE0415E6C811637D5B /* Pods_SMWRealm_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4386A9FA8C9B1D8B5759840 /* Pods_SMWRealm_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -22,7 +23,6 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,7 @@
 		192C259073975071D5DAEAF4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2224A1461BCC377900E55B0D /* SMWRealmPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMWRealmPerson.h; sourceTree = "<group>"; };
 		2224A1471BCC377900E55B0D /* SMWRealmPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMWRealmPerson.m; sourceTree = "<group>"; };
+		2224A1491BCC434900E55B0D /* SMWRealmKeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMWRealmKeyTests.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SMWRealm_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMWRealm_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,7 +58,6 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71802712B07B0BA750287E4D /* SMWRealm.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SMWRealm.podspec; path = ../SMWRealm.podspec; sourceTree = "<group>"; };
 		7D01C73E43673C86939223DD /* Pods-SMWRealm_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				2224A1491BCC434900E55B0D /* SMWRealmKeyTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -257,7 +257,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SMW;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sam Meech-Ward";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -414,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				2224A14A1BCC434900E55B0D /* SMWRealmKeyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +466,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -571,6 +572,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMWRealm_Example.app/SMWRealm_Example";
 				WRAPPER_EXTENSION = xctest;
@@ -590,6 +592,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMWRealm_Example.app/SMWRealm_Example";
 				WRAPPER_EXTENSION = xctest;

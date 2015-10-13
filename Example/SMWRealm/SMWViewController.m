@@ -23,7 +23,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    return;
     
+    [self realm];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)realm {
     // Create a new person object
     SMWRealmPerson *person = [[SMWRealmPerson alloc] init];
     person.key = [[NSUUID UUID] UUIDString];
@@ -37,8 +49,8 @@
     // Update the person's name on a background queue
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         [personKey updateRealmObject:^(SMWRealmPerson *object, RLMRealm *realm) {
-            object.firstName = @"Sam";
-            object.lastName = @"Meech-Ward";
+            object.firstName = @"First";
+            object.lastName = @"Last";
         }];
         NSLog(@"Current Thread: %@", [NSThread currentThread]);
         
@@ -69,13 +81,6 @@
         });
         
     });
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
