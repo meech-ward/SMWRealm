@@ -10,6 +10,8 @@
 
 @class RLMObject, RLMRealm;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SMWRealmKey<RLMObjectType> : NSObject
 
 /// A class method that does the same thing as the initWithRealmObject object method.
@@ -32,7 +34,7 @@
  Read any properties from the realm object.
  @param block Any reading of the realm object's properties should take place inside this block.
  */
-- (void)readRealmObject:(void(^)(RLMObjectType object))block;
+- (void)readRealmObject:(void(^)(RLMObjectType _Nullable object))block;
 
 
 /// @name Update
@@ -41,7 +43,7 @@
  Update any properties of the realm object.
  @param block Any updates to the realm object should take place inside this block.
  */
-- (void)updateRealmObject:(void(^)(RLMObjectType object, RLMRealm *realm))block;
+- (void)updateRealmObject:(void(^)(RLMObjectType _Nullable object, RLMRealm * _Nullable realm))block;
 
 
 /// Delete
@@ -59,6 +61,8 @@
  @param object A realm key object to be compared to this object.
  @return YES when the two objects represent the same RLMObject, NO otherwise.
  */
-- (BOOL)isEqualToKey:(id)object;
+- (BOOL)isEqualToKey:(nullable id)object;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -53,10 +53,9 @@
 #pragma mark - Update
 
 - (void)updateRealmObject:(void(^)(id object, RLMRealm *realm))block {
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    
     // Get the current object
     id obj = [_realmClass objectForPrimaryKey:_primaryKey];
+    RLMRealm *realm = ((RLMObject *)obj).realm;
     
     // Perform the block
     [realm beginWriteTransaction];
