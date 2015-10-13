@@ -31,3 +31,39 @@ Sam Meech-Ward, sam@meech-ward.com
 ## License
 
 SMWRealm is available under the MIT license. See the LICENSE file for more info.
+
+## How to use
+
+Any RLMObject that uses the SMWRealmKey must have a valid primary key.
+
+Import the SMWRealm header
+
+
+    #import <SMWRealm/SMWRealm.h>
+
+Setup your RLMObject as normal.
+
+    Person *person = [[Person alloc] init];
+    person.firstName = @"Sam";
+    person.lastName = @"Meech-Ward";
+Then save to a realm using the smw save method which returns a realm key object
+
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    SMWRealmKey<Person *> *personKey = [person smw_createOrUpdateInRealm:realm];
+Now you can pass this SMWRealmKey object around different threads and use its methods to read and update the RLMObject.
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+      [personKey updateRealmObject:^(SMWRealmPerson *object, RLMRealm *realm) {
+        object.firstName = @"New First Name";
+        object.lastName = @"New Last Name";
+      }];
+    });
+
+
+#### SMWRealmKey methods
+
+    - (instancetype)initWithRealmObject:(RLMObject *)realmObject;
+    - (void)readRealmObject:(void(^)(RLMObjectType _Nullable object))block;
+    - (void)updateRealmObject:(void(^)(RLMObjectType _Nullable object, RLMRealm * _Nullable realm))block;
+    - (void)deleteRealmObject;
+    - (BOOL)isEqualToKey:(nullable id)object;
