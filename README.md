@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
 [![Platform](https://img.shields.io/cocoapods/p/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
 
+
+
+SMWRealm makes it even easier to create, read, update, and delete RLMObjects from different threads. 
+Simply pass around the SMWRealmKey object betweeen different threads, and use its methods to communicate with its RLMObject.
+This takes the thinking out of mulithreading with Realm.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
