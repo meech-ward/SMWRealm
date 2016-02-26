@@ -42,6 +42,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// The value of the primary key of the realm object that this represents.
 @property (strong, nonatomic, readonly) id primaryKey;
 
+
+/// @name Containers
+
+/**
+ Create an array of SMWRealmKeys from the objects inside a RLMResults container.
+ @param results A RLMResults container of objects that will be converted into keys.
+ @return An array of SMWKey objects representing the RLMObjects passed in.
+ */
++ (NSArray<SMWRealmKey<RLMObjectType> *> *)arrayOfKeysFromResults:(RLMResults *)results;
+
+
 /// @name Read
 
 /**

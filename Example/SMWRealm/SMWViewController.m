@@ -47,33 +47,41 @@
     
     // Update the person's name on a background queue
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        
         [personKey updateRealmObject:^(SMWRealmPerson *object, RLMRealm *realm) {
             object.firstName = @"First";
             object.lastName = @"Last";
         }];
+        
         NSLog(@"Current Thread: %@", [NSThread currentThread]);
         
         // Read the properies back on the main thread
         dispatch_async(dispatch_get_main_queue(), ^{
+            
             [personKey readRealmObject:^(SMWRealmPerson *object) {
                 NSString *fullName = [NSString stringWithFormat:@"%@ %@", object.firstName, object.lastName];
                 self.nameLabel.text = fullName;
             }];
+            
             NSLog(@"Current Thread: %@", [NSThread currentThread]);
             
             // Delete the object on a background thread
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+                
                 [personKey deleteRealmObject];
+                
                 NSLog(@"Current Thread: %@", [NSThread currentThread]);
                 
                 // Make sure the object was deleted
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSLog(@"Current Thread: %@", [NSThread currentThread]);
+                    
                     [personKey readRealmObject:^(SMWRealmPerson *object) {
                         if (!object) {
                             NSLog(@"Sucessfully deleted person");
                         }
                     }];
+                    
                 });
                 
             });

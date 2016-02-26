@@ -1,6 +1,6 @@
 {
   "name": "SMWRealm",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "summary": "Make it easier to pass around, read, and modify realm objects accross multiple threads.",
   "description": "SMWRealm uses the primary keys of RMLObjects and thread safe SMWRealmKey objects to easily use RLMObjects accorss multiple threads.",
   "homepage": "https://github.com/meech-ward/SMWRealm",
@@ -10,10 +10,13 @@
   },
   "source": {
     "git": "https://github.com/meech-ward/SMWRealm.git",
-    "tag": "0.1.1"
+    "tag": "0.1.3"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "7.0",
+    "osx": "10.9",
+    "watchos": "2.0",
+    "tvos": "9.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",

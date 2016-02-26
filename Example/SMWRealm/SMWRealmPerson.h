@@ -13,6 +13,7 @@
 @property NSString *key;
 @property NSString *firstName;
 @property NSString *lastName;
+@property NSDate *birthday;
 
 @end
 

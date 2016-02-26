@@ -1,6 +1,6 @@
 # SMWRealm
 
-[![CI Status](http://img.shields.io/travis/Sam Meech-Ward/SMWRealm.svg?style=flat)](https://travis-ci.org/Sam Meech-Ward/SMWRealm)
+[![CI Status](http://img.shields.io/travis/Sam Meech-Ward/SMWRealm.svg?style=flat)](https://travis-ci.org/meech-ward/SMWRealm)
 [![Version](https://img.shields.io/cocoapods/v/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
 [![License](https://img.shields.io/cocoapods/l/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
 [![Platform](https://img.shields.io/cocoapods/p/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
@@ -67,3 +67,10 @@ Now you can pass this SMWRealmKey object around different threads and use its me
     - (void)updateRealmObject:(void(^)(RLMObjectType _Nullable object, RLMRealm * _Nullable realm))block;
     - (void)deleteRealmObject;
     - (BOOL)isEqualToKey:(nullable id)object;
+
+When deleting related objects, it's convenient to use the update function
+    [key updateRealmObject:^(Person * _Nullable object, RLMRealm * _Nullable realm) {
+        Dog *dog = person.dog;
+        [realm deleteObjects:@[person, dog]];
+    }];
+

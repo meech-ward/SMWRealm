@@ -55,6 +55,17 @@
     
 }
 
+#pragma mark - 
+#pragma mark - Containers
+
++ (NSArray *)arrayOfKeysFromResults:(RLMResults *)results {
+    NSMutableArray *keys = [[NSMutableArray alloc] init];
+    for (RLMObject *result  in results) {
+        [keys addObject:[SMWRealmKey keyWithRealmObject:result]];
+    }
+    return keys.copy;
+}
+
 #pragma mark -
 #pragma mark - Read
 
