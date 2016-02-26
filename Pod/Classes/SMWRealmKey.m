@@ -41,6 +41,10 @@
     return [[SMWRealmKey alloc] initWithRealmObject:realmObject];
 }
 
+- (instancetype)init {
+    return [self initWithRealmObject:[[RLMObject alloc] init]];
+}
+
 - (instancetype)initWithRealmObject:(RLMObject *)realmObject {
     self = [super init];
     if (self) {

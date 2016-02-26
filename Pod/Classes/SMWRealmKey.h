@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class RLMObject, RLMRealm;
+@class RLMObject, RLMRealm, RLMResults;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,11 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param realmObject The realm object that this object will represent.
  @return A new `SMWRealmKey` object.
  */
-- (instancetype)initWithRealmObject:(RLMObject *)realmObject;
+- (instancetype)initWithRealmObject:(RLMObject *)realmObject NS_DESIGNATED_INITIALIZER;
 
 /// The value of the primary key of the realm object that this represents.
 @property (strong, nonatomic, readonly) id primaryKey;
-
 
 /// @name Read
 
