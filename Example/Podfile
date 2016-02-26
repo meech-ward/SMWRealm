@@ -2,14 +2,23 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'SMWRealm_Example', :exclusive => true do
+target 'SMWRealm_Example' do
   platform :ios, '7.0'
   pod "SMWRealm", :path => "../"
 end
 
-target 'SMWRealm_Tests', :exclusive => true do
+#target 'SMWRealm-WatchExample Extension' do
+#    pod "SMWRealm", :path => "../"
+#end
+#
+#target'SMWRealm-WatchExample' do
+#    pod "SMWRealm", :path => "../"
+#end
+
+target 'SMWRealm_Tests' do
   platform :ios, '7.0'
   pod "SMWRealm", :path => "../"
+  pod 'Realm/Headers'
 
   pod 'Specta'
   pod 'Expecta'
