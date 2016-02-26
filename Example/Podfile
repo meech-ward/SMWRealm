@@ -5,20 +5,14 @@ use_frameworks!
 target 'SMWRealm_Example' do
   platform :ios, '7.0'
   pod "SMWRealm", :path => "../"
+  pod 'Realm'
 end
 
-#target 'SMWRealm-WatchExample Extension' do
-#    pod "SMWRealm", :path => "../"
-#end
-#
-#target'SMWRealm-WatchExample' do
-#    pod "SMWRealm", :path => "../"
-#end
 
 target 'SMWRealm_Tests' do
   platform :ios, '7.0'
   pod "SMWRealm", :path => "../"
-  pod 'Realm/Headers'
+  pod 'Realm'
 
   pod 'Specta'
   pod 'Expecta'
