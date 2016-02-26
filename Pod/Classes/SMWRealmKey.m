@@ -17,6 +17,14 @@
 // The class of the realm object this object represents.
 @property (strong, nonatomic) Class realmClass;
 
+// The path of the realm that the object has when it is passed in.
+@property (strong, nonatomic) NSString *realmPath;
+// The realm that the object has when it is passed in.
+@property (strong, nonatomic, readonly) RLMRealm *objectsRealm;
+
+// The realm object that this key represents
+@property (strong, nonatomic) RLMObject *realmObject;
+
 @end
 
 @implementation SMWRealmKey
@@ -48,8 +56,9 @@
 - (instancetype)initWithRealmObject:(RLMObject *)realmObject {
     self = [super init];
     if (self) {
-        self.primaryKey = [self primaryKeyForRealmObject:realmObject];
-        self.realmClass = realmObject.class;
+        _primaryKey = [self primaryKeyForRealmObject:realmObject];
+        _realmClass = realmObject.class;
+        _realmPath = realmObject.realm.path;
     }
     return self;
     
@@ -69,13 +78,20 @@
 #pragma mark -
 #pragma mark - Read
 
+- (RLMRealm *)objectsRealm {
+    if (_realmPath && _realmPath.length > 0) {
+        return [RLMRealm realmWithPath:_realmPath];
+    }
+    return [RLMRealm defaultRealm];
+}
+
+- (RLMObject *)realmObject {
+    return [_realmClass objectInRealm:self.objectsRealm forPrimaryKey:_primaryKey];
+}
+
 - (void)readRealmObject:(void(^)(id object))block {
-    
-    // Get the current object
-    id obj = [_realmClass objectForPrimaryKey:_primaryKey];
-    
     // Perform the block
-    block(obj);
+    block(self.realmObject);
 }
 
 #pragma mark -
@@ -83,7 +99,7 @@
 
 - (void)updateRealmObject:(void(^)(id object, RLMRealm *realm))block {
     // Get the current object
-    id obj = [_realmClass objectForPrimaryKey:_primaryKey];
+    id obj = self.realmObject;
     RLMRealm *realm = ((RLMObject *)obj).realm;
     
     // Perform the block
