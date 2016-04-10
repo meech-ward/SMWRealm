@@ -21,6 +21,12 @@ SMWRealm requires iOS 7.0 and above or OS X 10.9 and above.
 
 SMWRealm also requires the thirdy-party open source library [Realm](https://realm.io/)
 
+## Examples
+
+To run the example project run ```git clone https://github.com/meech-ward/SMWRealm.git```  
+Then open the Example directory and run ```pod install```  
+Now you can open and run the project in Example/SMWRealm.xcworkspace.
+
 ## Installation
 
 SMWRealm is available through [CocoaPods](http://cocoapods.org). To install
