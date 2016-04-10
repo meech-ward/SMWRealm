@@ -1,6 +1,0 @@
-framework module SMWRealm {
-  umbrella header "SMWRealm-umbrella.h"
-
-  export *
-  module * { export * }
-}
