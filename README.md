@@ -49,34 +49,40 @@ Import the SMWRealm header
 
 Setup your RLMObject as normal.
 
-    Person *person = [[Person alloc] init];
-    person.firstName = @"Sam";
-    person.lastName = @"Meech-Ward";
-Then save to a realm using the SMWRealmKey object
+``` objective-c
+Person *person = [[Person alloc] init];
+person.firstName = @"Sam";
+person.lastName = @"Meech-Ward";
+```  
+Then save to a realm using the SMWRealmKey object  
+``` objective-c
+RLMRealm *realm = [RLMRealm defaultRealm];
+SMWRealmKey<Person *> *personKey = [SMWRealmKey createOrUpdateObject:person inRealm:realm];
+```   
+Now you can pass this SMWRealmKey object around different threads and use its methods to read and update the RLMObject.  
+``` objective-c
+dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+  [personKey updateRealmObject:^(SMWRealmPerson *object, RLMRealm *realm) {
+    object.firstName = @"New First Name";
+    object.lastName = @"New Last Name";
+  }];
+});
+```
 
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    SMWRealmKey<Person *> *personKey = [SMWRealmKey createOrUpdateObject:person inRealm:realm];
-Now you can pass this SMWRealmKey object around different threads and use its methods to read and update the RLMObject.
+#### SMWRealmKey methods  
+``` objective-c
+- (instancetype)initWithRealmObject:(RLMObject *)realmObject;
+- (void)readRealmObject:(void(^)(RLMObjectType _Nullable object))block;
+- (void)updateRealmObject:(void(^)(RLMObjectType _Nullable object, RLMRealm * _Nullable realm))block;
+- (void)deleteRealmObject;
+- (BOOL)isEqualToKey:(nullable id)object;
+```  
 
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-      [personKey updateRealmObject:^(SMWRealmPerson *object, RLMRealm *realm) {
-        object.firstName = @"New First Name";
-        object.lastName = @"New Last Name";
-      }];
-    });
-
-
-#### SMWRealmKey methods
-
-    - (instancetype)initWithRealmObject:(RLMObject *)realmObject;
-    - (void)readRealmObject:(void(^)(RLMObjectType _Nullable object))block;
-    - (void)updateRealmObject:(void(^)(RLMObjectType _Nullable object, RLMRealm * _Nullable realm))block;
-    - (void)deleteRealmObject;
-    - (BOOL)isEqualToKey:(nullable id)object;
-
-When deleting related objects, it's convenient to use the update function
-    [key updateRealmObject:^(Person * _Nullable object, RLMRealm * _Nullable realm) {
-        Dog *dog = person.dog;
-        [realm deleteObjects:@[person, dog]];
-    }];
+When deleting related objects, it's convenient to use the update function  
+``` objective-c
+[key updateRealmObject:^(Person * _Nullable object, RLMRealm * _Nullable realm) {
+    Dog *dog = person.dog;
+    [realm deleteObjects:@[person, dog]];
+}];
+```
 
