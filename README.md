@@ -1,6 +1,6 @@
 # SMWRealm
 
-[![CI Status](http://img.shields.io/travis/Sam Meech-Ward/SMWRealm.svg?style=flat)](https://travis-ci.org/meech-ward/SMWRealm)
+[![CI Status](https://img.shields.io/travis/meech-ward/SMWRealm.svg)](https://travis-ci.org/meech-ward/SMWRealm)
 [![Version](https://img.shields.io/cocoapods/v/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
 [![License](https://img.shields.io/cocoapods/l/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
 [![Platform](https://img.shields.io/cocoapods/p/SMWRealm.svg?style=flat)](http://cocoapods.org/pods/SMWRealm)
