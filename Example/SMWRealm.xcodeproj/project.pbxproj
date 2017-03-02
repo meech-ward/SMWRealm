@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024BB3DC96B9675413B9C34D /* Pods_SMWRealm_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012FACCCF91E24FC124AB413 /* Pods_SMWRealm_Tests.framework */; };
 		2224A1481BCC377900E55B0D /* SMWRealmPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2224A1471BCC377900E55B0D /* SMWRealmPerson.m */; };
 		2224A14A1BCC434900E55B0D /* SMWRealmKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2224A1491BCC434900E55B0D /* SMWRealmKeyTests.m */; };
 		22A6F48F1BE295E1008DBAC2 /* SMWRealmKeyContainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A6F48E1BE295E1008DBAC2 /* SMWRealmKeyContainerTests.m */; };
@@ -22,9 +23,8 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		8612DF0DC3667C50D7915429 /* Pods_SMWRealm_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 266EC6CDF8714A1650EC75A1 /* Pods_SMWRealm_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		9A5E53590F98BE1939369A71 /* Pods_SMWRealm_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69254A0A6C72D1A20B3E513E /* Pods_SMWRealm_Example.framework */; };
+		B9FEA8D7743671E75D2AC373 /* Pods_SMWRealm_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379CF6257DCB484631803322 /* Pods_SMWRealm_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +51,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		012FACCCF91E24FC124AB413 /* Pods_SMWRealm_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMWRealm_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192C259073975071D5DAEAF4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2224A1461BCC377900E55B0D /* SMWRealmPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMWRealmPerson.h; sourceTree = "<group>"; };
 		2224A1471BCC377900E55B0D /* SMWRealmPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMWRealmPerson.m; sourceTree = "<group>"; };
 		2224A1491BCC434900E55B0D /* SMWRealmKeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMWRealmKeyTests.m; sourceTree = "<group>"; };
 		22A6F48E1BE295E1008DBAC2 /* SMWRealmKeyContainerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMWRealmKeyContainerTests.m; sourceTree = "<group>"; };
-		266EC6CDF8714A1650EC75A1 /* Pods_SMWRealm_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMWRealm_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3429056A26776CCF36F71B44 /* Pods-SMWRealm_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		379CF6257DCB484631803322 /* Pods_SMWRealm_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMWRealm_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* SMWRealm_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMWRealm_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,13 +76,13 @@
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		69254A0A6C72D1A20B3E513E /* Pods_SMWRealm_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMWRealm_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E4E88B56BBA642CDA020F5 /* Pods-SMWRealm_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Tests/Pods-SMWRealm_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71802712B07B0BA750287E4D /* SMWRealm.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SMWRealm.podspec; path = ../SMWRealm.podspec; sourceTree = "<group>"; };
-		840D341DBF1ED89A5E128ACC /* Pods-SMWRealm_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		9FA63B45FB48E85EF91A3A6A /* Pods-SMWRealm_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Tests/Pods-SMWRealm_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1AD50B653D2691BC6C6FB1B /* Pods-SMWRealm_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Tests/Pods-SMWRealm_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFAE80D7C363429A0555E8D4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		DE1D3F0AB69BA583C2F0F18C /* Pods-SMWRealm_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Tests/Pods-SMWRealm_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E76BA3B1646F6D4740160A36 /* Pods-SMWRealm_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F0804E587FE4A4999BE2F5A7 /* Pods-SMWRealm_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMWRealm_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				9A5E53590F98BE1939369A71 /* Pods_SMWRealm_Example.framework in Frameworks */,
+				B9FEA8D7743671E75D2AC373 /* Pods_SMWRealm_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,13 +104,24 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				8612DF0DC3667C50D7915429 /* Pods_SMWRealm_Tests.framework in Frameworks */,
+				024BB3DC96B9675413B9C34D /* Pods_SMWRealm_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022B4A8BBA05C20BB0F0960D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E76BA3B1646F6D4740160A36 /* Pods-SMWRealm_Example.debug.xcconfig */,
+				F0804E587FE4A4999BE2F5A7 /* Pods-SMWRealm_Example.release.xcconfig */,
+				A1AD50B653D2691BC6C6FB1B /* Pods-SMWRealm_Tests.debug.xcconfig */,
+				70E4E88B56BBA642CDA020F5 /* Pods-SMWRealm_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2224A1451BCC376B00E55B0D /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,17 +129,6 @@
 				2224A1471BCC377900E55B0D /* SMWRealmPerson.m */,
 			);
 			name = Realm;
-			sourceTree = "<group>";
-		};
-		3C546D1394F6200169C768A8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3429056A26776CCF36F71B44 /* Pods-SMWRealm_Example.debug.xcconfig */,
-				840D341DBF1ED89A5E128ACC /* Pods-SMWRealm_Example.release.xcconfig */,
-				9FA63B45FB48E85EF91A3A6A /* Pods-SMWRealm_Tests.debug.xcconfig */,
-				DE1D3F0AB69BA583C2F0F18C /* Pods-SMWRealm_Tests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -139,7 +139,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				3C546D1394F6200169C768A8 /* Pods */,
+				022B4A8BBA05C20BB0F0960D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,8 +159,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				69254A0A6C72D1A20B3E513E /* Pods_SMWRealm_Example.framework */,
-				266EC6CDF8714A1650EC75A1 /* Pods_SMWRealm_Tests.framework */,
+				379CF6257DCB484631803322 /* Pods_SMWRealm_Example.framework */,
+				012FACCCF91E24FC124AB413 /* Pods_SMWRealm_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,13 +229,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SMWRealm_Example" */;
 			buildPhases = (
-				5FC52EBC6EF71A7C5050E79F /* Check Pods Manifest.lock */,
+				7F74AB2C68726C9CB5A5C38E /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				22F4DAD41BF40E810097F019 /* Embed Watch Content */,
-				0755EA268D1FEADDA6079CA6 /* Embed Pods Frameworks */,
-				AFE0655658CA54868799FBC9 /* Copy Pods Resources */,
+				C6DDA7BC4E6E0BA073A30861 /* [CP] Embed Pods Frameworks */,
+				F6D42148590C4163F6115AF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,12 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "SMWRealm_Tests" */;
 			buildPhases = (
-				875236537C8F1208CDE81212 /* Check Pods Manifest.lock */,
+				15088128EF85A2AB00F82B27 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				D2D896ED55F7E8733DD34D68 /* Embed Pods Frameworks */,
-				BFE36C621477812AA635E5FF /* Copy Pods Resources */,
+				3D74C3A71E0463373BAC634E /* [CP] Embed Pods Frameworks */,
+				C3E1FD445EEBA98A03F29E2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,7 +274,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SMW;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Sam Meech-Ward";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -323,74 +323,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0755EA268D1FEADDA6079CA6 /* Embed Pods Frameworks */ = {
+		15088128EF85A2AB00F82B27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5FC52EBC6EF71A7C5050E79F /* Check Pods Manifest.lock */ = {
+		3D74C3A71E0463373BAC634E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMWRealm_Tests/Pods-SMWRealm_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		875236537C8F1208CDE81212 /* Check Pods Manifest.lock */ = {
+		7F74AB2C68726C9CB5A5C38E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AFE0655658CA54868799FBC9 /* Copy Pods Resources */ = {
+		C3E1FD445EEBA98A03F29E2D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFE36C621477812AA635E5FF /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,19 +383,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMWRealm_Tests/Pods-SMWRealm_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2D896ED55F7E8733DD34D68 /* Embed Pods Frameworks */ = {
+		C6DDA7BC4E6E0BA073A30861 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMWRealm_Tests/Pods-SMWRealm_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D42148590C4163F6115AF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMWRealm_Example/Pods-SMWRealm_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -479,14 +479,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -499,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,20 +524,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -541,14 +551,14 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3429056A26776CCF36F71B44 /* Pods-SMWRealm_Example.debug.xcconfig */;
+			baseConfigurationReference = E76BA3B1646F6D4740160A36 /* Pods-SMWRealm_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMWRealm/SMWRealm-Prefix.pch";
 				INFOPLIST_FILE = "SMWRealm/SMWRealm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meech-ward.SMWRealm-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -558,14 +568,14 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 840D341DBF1ED89A5E128ACC /* Pods-SMWRealm_Example.release.xcconfig */;
+			baseConfigurationReference = F0804E587FE4A4999BE2F5A7 /* Pods-SMWRealm_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMWRealm/SMWRealm-Prefix.pch";
 				INFOPLIST_FILE = "SMWRealm/SMWRealm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meech-ward.SMWRealm-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,7 +585,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FA63B45FB48E85EF91A3A6A /* Pods-SMWRealm_Tests.debug.xcconfig */;
+			baseConfigurationReference = A1AD50B653D2691BC6C6FB1B /* Pods-SMWRealm_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -599,7 +609,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE1D3F0AB69BA583C2F0F18C /* Pods-SMWRealm_Tests.release.xcconfig */;
+			baseConfigurationReference = 70E4E88B56BBA642CDA020F5 /* Pods-SMWRealm_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SMWRealm"
-  s.version          = "0.1.3"
+  s.version          = "0.2.0"
   s.summary          = "Make it easier to pass around, read, and modify realm objects accross multiple threads."
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/meech-ward/SMWRealm.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platforms = { :ios => "7.0", :watchos => "2.0", :tvos => "9.0" }
+  s.platforms = { :ios => "10.0", :watchos => "3.0", :tvos => "10.0" }
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -37,5 +37,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Realm', '~>0.98.2'
+  s.dependency 'Realm', '~>2.4'
 end

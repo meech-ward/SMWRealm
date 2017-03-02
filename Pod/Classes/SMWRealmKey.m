@@ -18,7 +18,7 @@
 @property (strong, nonatomic) Class realmClass;
 
 // The path of the realm that the object has when it is passed in.
-@property (strong, nonatomic) NSString *realmPath;
+@property (strong, nonatomic) NSURL *realmURL;
 // The realm that the object has when it is passed in.
 @property (strong, nonatomic, readonly) RLMRealm *objectsRealm;
 
@@ -58,7 +58,7 @@
     if (self) {
         _primaryKey = [self primaryKeyForRealmObject:realmObject];
         _realmClass = realmObject.class;
-        _realmPath = realmObject.realm.path;
+        _realmURL = realmObject.realm.configuration.fileURL;
     }
     return self;
     
@@ -79,8 +79,8 @@
 #pragma mark - Read
 
 - (RLMRealm *)objectsRealm {
-    if (_realmPath && _realmPath.length > 0) {
-        return [RLMRealm realmWithPath:_realmPath];
+    if (_realmURL && _realmURL.absoluteString.length > 0) {
+        return [RLMRealm realmWithURL:_realmURL];
     }
     return [RLMRealm defaultRealm];
 }

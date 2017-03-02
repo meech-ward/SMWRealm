@@ -21,9 +21,11 @@ describe(@"Use containers with realm key", ^{
         
         // Create a new realm for the tests in this file
         RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
-        config.path = [[[config.path stringByDeletingLastPathComponent]
-                        stringByAppendingPathComponent:@"SMWRealmKeyContainers"]
-                       stringByAppendingPathExtension:@"realm"];
+        NSString *lastComponent = [@"SMWRealmKeyContainers" stringByAppendingPathExtension:@"realm"];
+        NSURL *url = config.fileURL;
+        url = [url URLByDeletingLastPathComponent];
+        url = [url URLByAppendingPathComponent:lastComponent];
+        config.fileURL = url;
         
         // Set this as the configuration used for the default Realm
         [RLMRealmConfiguration setDefaultConfiguration:config];
