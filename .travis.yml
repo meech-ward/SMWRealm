@@ -17,5 +17,5 @@ podfile: Example/Podfile
 
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
-- pod repo update --project-directory=Example
+- pod repo update
 - pod install --project-directory=Example
