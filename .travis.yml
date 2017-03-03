@@ -4,14 +4,14 @@
 
 language: objective-c
 
-osx_image: xcode8.0
+osx_image: xcode8.2
 
 podfile: Example/Podfile
 
 xcode_workspace: Example/SMWRealm.xcworkspace/
 xcode_scheme: SMWRealm-Example
 
-xcode_sdk: iphonesimulator10.0
+xcode_sdk: iphonesimulator10.1
 
 podfile: Example/Podfile
 
